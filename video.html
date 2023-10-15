@@ -7,19 +7,23 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <div style="position: absolute; top: 0; left: 0; width: 20vw; height: 20vh; z-index: 2000; background-color: blue;" id="shutdown"></div>
     <div style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1000;" id="test"></div>
     <div style="width: 100%; height: 100vh;" id="playwindow">
-        <iframe src="//player.bilibili.com/player.html?aid=42618239&bvid=BV17b411r7Wg&cid=74768507&p=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%" danmaku="0"> </iframe>
+        <iframe src="//player.bilibili.com/player.html?aid=42618239&bvid=BV17b411r7Wg&cid=74768507&p=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%" danmaku="0" id="iframeplayer"> </iframe>
     </div>
-    <button id="test2">123</button>
   </body>
   <script type="text/javascript">
+    var iframesrc = window.location.search.substring(5)
+    var iframeplayer = document.getElementById("iframeplayer")
+    iframeplayer.src = iframesrc
     var playwindow = document.getElementById('test')
-    var listurl = "/helptheold.html"
     playwindow.addEventListener('click', function(e){
         e.preventDefault()
-        //window.location.href= listurl
-        window.close()
+    }, false)
+    var shutdown = document.getElementById('shutdown')
+    shutdown.addEventListener('click', function(e){
+      window.close()
     }, false)
   </script>
 </html>
