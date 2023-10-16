@@ -15,7 +15,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <div class="container-fluid" style="padding-top: 20px;">
+    <div class="container-fluid" style="display: flex; justify-content: center; align-items: center; width: 100vw; height: 100vh;">
 <!--         <ul class="list-group">
           <li class="list-group-item" id="show1">铡美案</li>
           <li class="list-group-item">西游记</li>
@@ -23,41 +23,16 @@
           <li class="list-group-item">楚剧</li>
           <li class="list-group-item">包青天</li>
         </ul> -->
-        <div class="row">
-          <div class="col-sm-12 show1" id="show1" data-id="1">
-            <img src="/cover/1.jpg" class="img-thumbnail img-fluid" style="margin-bottom: 20px;">
+        <div class="row" style="width: 100%;">
+          <div class="col-sm-6 show1" id="next" data-id="1">
+            <button type="button" class="btn btn-secondary" style="width: 100%; margin: 20px; height: 400px;">换一个</button>
           </div>
-          <div class="col-sm-12 show1" id="show1" data-id="2">
-            <img src="/cover/2.jpg" class="img-thumbnail img-fluid" style="margin-bottom: 20px;">
-          </div>
-          <div class="col-sm-12 show1" id="show1" data-id="3">
-            <img src="/cover/3.jpg" class="img-thumbnail img-fluid" style="margin-bottom: 20px;">
-          </div>
-          <div class="col-sm-12 show1" id="show1" data-id="4">
-            <img src="/cover/4.jpg" class="img-thumbnail img-fluid" style="margin-bottom: 20px;">
-          </div>
-          <div class="col-sm-12 show1" id="show1" data-id="5">
-            <img src="/cover/5.jpg" class="img-thumbnail img-fluid" style="margin-bottom: 20px;">
-          </div>
-          <div class="col-sm-12 show1" id="show1" data-id="6">
-            <img src="/cover/6.png" class="img-thumbnail img-fluid" style="margin-bottom: 20px;">
-          </div>
-          <div class="col-sm-12 show1" id="show1" data-id="7">
-            <img src="/cover/7.jpeg" class="img-thumbnail img-fluid" style="margin-bottom: 20px;">
+          <div class="col-sm-6 show1" id="confirm" data-id="2">
+            <button type="button" class="btn btn-primary" style="width: 100%; margin: 20px; height: 400px;">看</button>
           </div>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <button type="button" class="btn btn-primary" id="confirm" style="width: 400px; height: 400px;">去看</button>
-            </div>
-        </div>
-        </div>
-    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -67,28 +42,27 @@
   </body>
   <script>
     $(function () {
-      var obj = {
-        "1": {"name": "十道茶", "url": "//player.bilibili.com/player.html?aid=218831738&bvid=BV1y8411x7AU&cid=853686904&p=1"},
-        "2": {"name": "何氏嫂劝姑", "url": "//player.bilibili.com/player.html?aid=42620136&bvid=BV1Jb411r7Ky&cid=74771578&p=1"},
-        "3": {"name": "天仙配", "url": "//player.bilibili.com/player.html?aid=872189606&bvid=BV1LV4y1Y7DW&cid=1230938365&p=1"},
-        "4": {"name": "四下河南", "url": "//player.bilibili.com/player.html?aid=42628698&bvid=BV1Hb411r7Cu&cid=74785709&p=1"},
-        "5": {"name": "吴汉杀棋", "url": "//player.bilibili.com/player.html?aid=286035159&bvid=BV12f4y1y7Fj&cid=201769198&p=1"},
-        "6": {"name": "狸猫换太子", "url": "//player.bilibili.com/player.html?aid=84293027&bvid=BV1X7411v7SG&cid=144185255&p=1"},
-        "7": {"name": "梁山伯与祝英台", "url": "//player.bilibili.com/player.html?aid=27535727&bvid=BV1ps411P7kQ&cid=47503770&p=1"}
-      }
+      var obj = [
+        {"name": "十道茶", "url": "//player.bilibili.com/player.html?aid=218831738&bvid=BV1y8411x7AU&cid=853686904&p=1"},
+        {"name": "何氏嫂劝姑", "url": "//player.bilibili.com/player.html?aid=42620136&bvid=BV1Jb411r7Ky&cid=74771578&p=1"},
+        {"name": "天仙配", "url": "//player.bilibili.com/player.html?aid=872189606&bvid=BV1LV4y1Y7DW&cid=1230938365&p=1"},
+        {"name": "四下河南", "url": "//player.bilibili.com/player.html?aid=42628698&bvid=BV1Hb411r7Cu&cid=74785709&p=1"},
+        {"name": "吴汉杀棋", "url": "//player.bilibili.com/player.html?aid=286035159&bvid=BV12f4y1y7Fj&cid=201769198&p=1"},
+        {"name": "狸猫换太子", "url": "//player.bilibili.com/player.html?aid=84293027&bvid=BV1X7411v7SG&cid=144185255&p=1"},
+        {"name": "梁山伯与祝英台", "url": "//player.bilibili.com/player.html?aid=27535727&bvid=BV1ps411P7kQ&cid=47503770&p=1"}
+      ]
+      var index = 0
       var video_url
-      $('.show1').on('click', function(e){
-        var sd = new Audio('/sound/'+ $(this).data("id") + '.m4a')
+      var sd = new Audio('/sound/1.m4a')
+      sd.play()
+      $('#next').on('click', function(e){
+        index += 1
+        var sd = new Audio('/sound/'+ (index%obj.length + 1) + '.m4a')
         sd.play()
-        //TODO 需要button居中放大？浏览器设置默认首页？远程控制托底？
-        //TODO 自动全屏，看完自动关闭页签？
-        video_url = "/video.html?url=" + obj[$(this).data("id")].url + "&high_quality=1&danmaku=0"
-        $('#exampleModalCenter').modal('show')
-      })
+      })      
       $('#confirm').on('click', function(e){
-            console.log(video_url)
-            var win = window.open(video_url, '_blank');
-            $('#exampleModalCenter').modal('hide')
+        video_url = "/video.html?url=" + obj[index%obj.length].url + "&high_quality=1&danmaku=0"
+        var win = window.open(video_url, '_blank');
       })
     })
   </script>
