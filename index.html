@@ -48,13 +48,13 @@
       sd.play()
       $('#next').on('click', function(e){
         index += 1
-        $.getJSON("/showinfo.json", function(obj) {
+        $.getJSON("/showinfo.json?v=" + index, function(obj) {
           var sd = new Audio('/sound/'+ (index%obj.length + 1) + '.m4a')
           sd.play()
         });
       })      
       $('#confirm').on('click', function(e){
-        $.getJSON("/showinfo.json", function(obj) {
+        $.getJSON("/showinfo.json?v=" + index, function(obj) {
           video_url = "/video.html?url=" + obj[index%obj.length].url + "&high_quality=1&danmaku=0&&autoplay=1"
           var win = window.open(video_url, '_blank');
         });
