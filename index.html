@@ -41,6 +41,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
   <script>
+    //TODO 自动换P不好解决
     $(function () {
       var index = 0
       var video_url
@@ -48,13 +49,13 @@
       sd.play()
       $('#next').on('click', function(e){
         index += 1
-        $.getJSON("/showinfo.json?v=" + index, function(obj) {
+        $.getJSON("/showinfo.json?v=" + Date.parse(new Date()), function(obj) {
           var sd = new Audio('/sound/'+ (index%obj.length + 1) + '.m4a')
           sd.play()
         });
       })      
       $('#confirm').on('click', function(e){
-        $.getJSON("/showinfo.json?v=" + index, function(obj) {
+        $.getJSON("/showinfo.json?v=" + Date.parse(new Date()), function(obj) {
           video_url = "/video.html?url=" + obj[index%obj.length].url + "&high_quality=1&danmaku=0&&autoplay=1"
           var win = window.open(video_url, '_blank');
         });
