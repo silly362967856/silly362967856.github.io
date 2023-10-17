@@ -36,33 +36,28 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
   <script>
     $(function () {
-      var obj = [
-        {"name": "十道茶", "url": "//player.bilibili.com/player.html?aid=218831738&bvid=BV1y8411x7AU&cid=853686904&p=1"},
-        {"name": "何氏嫂劝姑", "url": "//player.bilibili.com/player.html?aid=42620136&bvid=BV1Jb411r7Ky&cid=74771578&p=1"},
-        {"name": "天仙配", "url": "//player.bilibili.com/player.html?aid=872189606&bvid=BV1LV4y1Y7DW&cid=1230938365&p=1"},
-        {"name": "四下河南", "url": "//player.bilibili.com/player.html?aid=42628698&bvid=BV1Hb411r7Cu&cid=74785709&p=1"},
-        {"name": "吴汉杀棋", "url": "//player.bilibili.com/player.html?aid=286035159&bvid=BV12f4y1y7Fj&cid=201769198&p=1"},
-        {"name": "狸猫换太子", "url": "//player.bilibili.com/player.html?aid=84293027&bvid=BV1X7411v7SG&cid=144185255&p=1"},
-        {"name": "梁山伯与祝英台", "url": "//player.bilibili.com/player.html?aid=27535727&bvid=BV1ps411P7kQ&cid=47503770&p=1"}
-      ]
       var index = 0
       var video_url
       var sd = new Audio('/sound/1.m4a')
       sd.play()
       $('#next').on('click', function(e){
         index += 1
-        var sd = new Audio('/sound/'+ (index%obj.length + 1) + '.m4a')
-        sd.play()
+        $.getJSON("/showinfo.json", function(obj) {
+          var sd = new Audio('/sound/'+ (index%obj.length + 1) + '.m4a')
+          sd.play()
+        });
       })      
       $('#confirm').on('click', function(e){
-        video_url = "/video.html?url=" + obj[index%obj.length].url + "&high_quality=1&danmaku=0"
-        var win = window.open(video_url, '_blank');
+        $.getJSON("/showinfo.json", function(obj) {
+          video_url = "/video.html?url=" + obj[index%obj.length].url + "&high_quality=1&danmaku=0"
+          var win = window.open(video_url, '_blank');
+        });
       })
     })
   </script>
