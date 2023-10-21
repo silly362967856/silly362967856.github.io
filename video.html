@@ -12,11 +12,25 @@
     <div style="width: 100%; height: 100vh;" id="playwindow">
         <iframe src="//player.bilibili.com/player.html?aid=42618239&bvid=BV17b411r7Wg&cid=74768507&p=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="100%" danmaku="0" id="iframeplayer"> </iframe>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
   </body>
   <script type="text/javascript">
-    var iframesrc = window.location.search.substring(5)
-    var iframeplayer = document.getElementById("iframeplayer")
-    iframeplayer.src = iframesrc
+    var id_pid = window.location.search.substring(4)
+    var index = id_pid.split("-")[0]
+    var pid = id_pid.split("-")[1]
+    $.getJSON("/showinfo.json?v=" + Date.parse(new Date()), function(obj) {
+      var iframesrc = obj[index].videos[pid].url + "&high_quality=1&danmaku=0&&autoplay=1"
+      console.log(obj, index, pid, obj[index].videos[pid].url)
+      var iframeplayer = document.getElementById("iframeplayer")
+      iframeplayer.src = iframesrc
+      if ( obj[index].videos[pid].video_length ) {
+        var next_pid = parseInt(pid) + 1
+        setTimeout(function(){
+          console.log("redirect")
+          window.location.href = "/video.html?id=" + index + "-" + next_pid
+        }, obj[index].videos[pid].video_length * 1000)
+      }
+    });    
     var playwindow = document.getElementById('test')
     playwindow.addEventListener('click', function(e){
         e.preventDefault()

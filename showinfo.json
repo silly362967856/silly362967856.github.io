@@ -1,11 +1,110 @@
 [
-    {"name": "十道茶", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=218831738&bvid=BV1y8411x7AU&cid=853686904&p=1"},
-    {"name": "何氏嫂劝姑", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=42620136&bvid=BV1Jb411r7Ky&cid=74771578&p=1"},
-    {"name": "天仙配", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=872189606&bvid=BV1LV4y1Y7DW&cid=1230938365&p=1"},
-    {"name": "四下河南", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75681466&p=133"},
-    {"name": "吴汉杀妻", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=85136955&p=116"},
-    {"name": "狸猫换太子", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75671936&p=154"},
-    {"name": "梁山伯与祝英台", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75809292&p=63"},
-    {"name": "翠花女检过", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75670338&p=60"},
-    {"name": "宝莲灯", "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75671006&p=122"}
+    {"name": "十道茶", "videos": [{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75689582&p=7", 
+            "video_length": 1932
+        }, {
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75690257&p=8", 
+            "video_length": null
+        }]
+    },
+    {"name": "何氏嫂劝姑", "videos": [{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75739100&p=3", 
+            "video_length": null
+        }]
+    },
+    {"name": "天仙配", "videos":[{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=872189606&bvid=BV1LV4y1Y7DW&cid=1230938365&p=1",
+            "video_length": null
+        }]
+    },
+    {"name": "四下河南", "videos": [{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75681466&p=133",
+            "video_length": 3338
+        }, {
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75681141&p=134",
+            "video_length": 3187            
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75681761&p=135",
+            "video_length": 2997                 
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75681761&p=135",
+            "video_length": 3180                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75682955&p=137",
+            "video_length": 3161                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75683407&p=138",
+            "video_length": 4214                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75683643&p=139",
+            "video_length": 3844                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75683722&p=140",
+            "video_length": 3667              
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75683723&p=141",
+            "video_length": null                
+        }]
+    },
+    {"name": "吴汉杀妻",  "videos": [{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=85136955&p=116",
+            "video_length": 3659
+        }, {
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=85135165&p=117",
+            "video_length": null            
+        }]
+    },
+    {"name": "狸猫换太子", "videos": [{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75671936&p=154",
+            "video_length": 3413
+        }, {
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75672461&p=155",
+            "video_length": 2359            
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75672961&p=156",
+            "video_length": 2337                 
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75673692&p=157",
+            "video_length": 3207                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75674190&p=158",
+            "video_length": 2922                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75673860&p=159",
+            "video_length": 2566                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75676046&p=160",
+            "video_length": 3565                         
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75675847&p=161",
+            "video_length": 3469              
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75676850&p=162",
+            "video_length": 3464                
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75676888&p=163",
+            "video_length": null               
+        }]
+    },
+    {"name": "梁山伯与祝英台", "videos": [{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75809292&p=63",
+            "video_length": 4068
+        }, {
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75809129&p=64",
+            "video_length": 4104            
+        },{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75809855&p=65",
+            "video_length": null                 
+        }]
+    },
+    {"name": "翠花女检过", "videos":[{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75670338&p=60",
+            "video_length": null
+        }]
+    },    
+    {"name": "宝莲灯", "videos":[{
+            "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75671006&p=122",
+            "video_length": null
+        }]
+    }
 ]

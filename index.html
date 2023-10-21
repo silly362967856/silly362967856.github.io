@@ -56,7 +56,7 @@
       })      
       $('#confirm').on('click', function(e){
         $.getJSON("/showinfo.json?v=" + Date.parse(new Date()), function(obj) {
-          video_url = "/video.html?url=" + obj[index%obj.length].url + "&high_quality=1&danmaku=0&&autoplay=1"
+          video_url = "/video.html?id=" + index%obj.length + "-" + 0
           var win = window.open(video_url, '_blank');
         });
       })
