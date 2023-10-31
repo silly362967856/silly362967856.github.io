@@ -106,5 +106,16 @@
             "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75671006&p=122",
             "video_length": null
         }]
-    }
+    },
+    {"name": "铡美案", "videos":[{
+        "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75668440&p=51",
+        "video_length": 4264
+    },{
+        "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75668215&p=52",
+        "video_length": 4337
+    },{
+        "url": "//www.bilibili.com/blackboard/html5mobileplayer.html?aid=43167906&bvid=BV1rb411S7wB&cid=75669158&p=53",
+        "video_length": null
+    }]
+}    
 ]
